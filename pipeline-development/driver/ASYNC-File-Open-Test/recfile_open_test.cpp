@@ -27,8 +27,8 @@ void get_events(const Metavision::EventCD *begin, const Metavision::EventCD *end
 int main(void) {
 
     // IMPLEMENT A WAY TO NOT WRITE OVER EXISTING FILE
-    string rec_path = "/home/root/File-Embed/pipeline-development/input_resources/blackwater1_rec1_slew7.raw";
-    string path = "/home/root/File-Embed/pipeline-development/processing+driver/ASYNC-Timesurface-Test/asynchronous_timesurface_test__recent.raw";
+    string rec_path = "/home/root/prophesee_media/blackwater1_rec1_slew7.raw";
+    string output_path = "/home/root/prophesee_media/recfile_open_test__recent.raw";
 
     int start_delay = 1;
 

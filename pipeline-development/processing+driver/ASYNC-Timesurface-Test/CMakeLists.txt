@@ -5,7 +5,7 @@ set (CMAKE_CXX_STANDARD 17)
 
 set (MAIN asynchronous_timesurface_test)
 add_executable (${MAIN} ${MAIN}.cpp)
-install (TARGETS ${MAIN} RUNTIME DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/build")
+install (TARGETS ${MAIN} RUNTIME DESTINATION bin)
 
 
 set (TSLIB_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/include/TimesurfaceLib.hpp")
