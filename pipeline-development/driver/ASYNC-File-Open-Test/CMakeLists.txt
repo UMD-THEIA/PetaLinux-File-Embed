@@ -1,11 +1,17 @@
-project(recfile_open_test)
+project (recfile_open_test)
+cmake_minimum_required (VERSION 3.5)
+set (CMAKE_CXX_STANDARD 17)
 
-cmake_minimum_required(VERSION 3.5)
 
-set(CMAKE_CXX_STANDARD 17)
+set (MAIN recfile_open_test)
+add_executable (${MAIN} ${MAIN}.cpp)
+install (TARGETS ${MAIN} RUNTIME DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/build")
 
-find_package(MetavisionSDK COMPONENTS core driver ui REQUIRED)
 
-set (sample recfile_open_test)
-add_executable(${sample} ${sample}.cpp)
-target_link_libraries(${sample} MetavisionSDK::core MetavisionSDK::driver MetavisionSDK::ui)
+find_package (MetavisionSDK COMPONENTS core driver ui REQUIRED)
+target_link_libraries (
+    ${MAIN}
+    MetavisionSDK::core
+    MetavisionSDK::driver
+    MetavisionSDK::ui
+    )
