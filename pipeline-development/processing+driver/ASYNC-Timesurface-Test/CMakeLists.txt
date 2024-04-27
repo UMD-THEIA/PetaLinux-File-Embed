@@ -17,7 +17,7 @@ set_target_properties (tsLib PROPERTIES LINKER_LANGUAGE CXX)
 add_subdirectory (src)
 
 
-find_package (MetavisionSDK COMPONENTS core driver REQUIRED)
+find_package (MetavisionSDK 4.5.2 COMPONENTS core driver REQUIRED)
 target_link_libraries (
     ${MAIN}
     tsLib

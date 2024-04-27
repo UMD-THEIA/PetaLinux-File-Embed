@@ -8,7 +8,7 @@ add_executable (${MAIN} ${MAIN}.cpp)
 install (TARGETS ${MAIN} RUNTIME DESTINATION bin)
 
 
-find_package (MetavisionSDK COMPONENTS core driver ui REQUIRED)
+find_package (MetavisionSDK 4.5.2 COMPONENTS core driver ui REQUIRED)
 target_link_libraries (
     ${MAIN}
     MetavisionSDK::core
