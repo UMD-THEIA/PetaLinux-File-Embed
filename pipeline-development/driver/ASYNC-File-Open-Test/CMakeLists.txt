@@ -8,7 +8,7 @@ add_executable (${MAIN} ${MAIN}.cpp)
 install (TARGETS ${MAIN} RUNTIME DESTINATION bin)
 
 
-set(MetavisionSDK_DIR "/home/jmwul/Desktop/PetaLinux-Projects/crosscompile-bin-test/os/build/tmp/work/cortexa9t2hf-neon-xilinx-linux-gnueabi/scriptembed/0.1+gitAUTOINC+e5e5837d0f-r0/recipe-sysroot/usr/share/cmake/MetavisionSDK")
+set(MetavisionSDK_DIR "/home/jmwul/Desktop/PetaLinux-Projects/crosscompile-bin-test/os/build/tmp/work/cortexa9t2hf-neon-xilinx-linux-gnueabi/scriptembed/2.2/recipe-sysroot/usr/share/cmake/MetavisionSDK")
 list(APPEND CMAKE_PREFIX_PATH ${MetavisionSDK_DIR})
 
 find_package (MetavisionSDK COMPONENTS core driver ui REQUIRED)
