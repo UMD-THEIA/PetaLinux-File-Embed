@@ -17,7 +17,10 @@ set_target_properties (tsLib PROPERTIES LINKER_LANGUAGE CXX)
 add_subdirectory (src)
 
 
-find_package (MetavisionSDK 4.5.2 COMPONENTS core driver REQUIRED)
+set(MetavisionSDK_DIR "/home/jmwul/Desktop/PetaLinux-Projects/crosscompile-bin-test/os/build/tmp/work/cortexa9t2hf-neon-xilinx-linux-gnueabi/scriptembed/0.1+gitAUTOINC+5e383a3f0a-r0/recipe-sysroot/usr/share/cmake/MetavisionSDK")
+list(APPEND CMAKE_PREFIX_PATH ${MetavisionSDK_DIR})
+
+find_package (MetavisionSDK COMPONENTS core driver REQUIRED)
 target_link_libraries (
     ${MAIN}
     tsLib
